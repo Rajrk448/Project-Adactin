@@ -28,10 +28,12 @@ public class Java {
 
 		WebElement txtPass = driver.findElement(By.id("pass"));
 		txtPass.sendKeys(s2);
-		// s.assertAll();
+
+		WebElement btnLogin = driver.findElement(By.id("login"));
+		btnLogin.click();
 	}
 
-	@DataProvider(name = "login",parallel=true)
+	@DataProvider(name = "login", parallel = true)
 	public Object[][] data() {
 		return new Object[][] { { "raj448", "258963" }, { "ragul", "rg78956" }, { "raki", "rak85693" } };
 
