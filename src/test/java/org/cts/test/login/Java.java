@@ -28,7 +28,9 @@ public class Java {
 
 		WebElement txtPass = driver.findElement(By.id("pass"));
 		txtPass.sendKeys(s2);
-		// s.assertAll();
+		
+		WebElement btnLogin = driver.findElement(By.name("login"));
+		btnLogin.click();
 	}
 
 	@DataProvider(name = "login",parallel=true)
