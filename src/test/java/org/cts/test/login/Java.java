@@ -29,8 +29,11 @@ public class Java {
 		WebElement txtPass = driver.findElement(By.id("pass"));
 		txtPass.sendKeys(s2);
 
-		WebElement btnLogin = driver.findElement(By.id("login"));
-		btnLogin.click();
+		WebElement btnLogin1 = driver.findElement(By.id("login"));
+		btnLogin1.click();
+
+		WebElement btnLogin = driver.findElement(By.name("login"));
+         btnLogin.click();
 	}
 
 	@DataProvider(name = "login", parallel = true)
